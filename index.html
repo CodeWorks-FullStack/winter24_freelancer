@@ -14,8 +14,9 @@
 
 <body>
 
-  <!-- TODO make this navbar always follow us on the page -->
-  <header>
+  <!-- TODO ✅ make this navbar always follow us on the page -->
+  <!-- NOTE sticky top makes an element stick to it's direct parent -->
+  <header class="sticky-top">
     <div class="container-fluid">
       <!-- NOTE row's are display: flex by default, no need for d-flex class -->
       <section class="row justify-content-around align-items-center bg-primary">
@@ -37,7 +38,7 @@
   <main>
     <div class="container-fluid">
 
-      <!-- SECTION Dude -->
+      <!-- SECTION dude -->
       <section class="row bg-success">
         <!-- NOTE m- represents margin, accepts numbers 1-5,  accepts directions ie mt mb ms me mx my -->
         <div class="col-12 my-5 text-light text-center">
@@ -52,7 +53,7 @@
       </section>
       <!-- !SECTION  -->
 
-      <!-- SECTION Portfolio -->
+      <!-- SECTION portfolio -->
       <section class="row">
         <div class="col-12 text-center my-5">
           <h2>PORTFOLIO</h2>
@@ -117,10 +118,75 @@
         </div>
       </section>
       <!-- !SECTION  -->
+
+      <!-- SECTION contact -->
+      <section class="row justify-content-center bg-secondary">
+        <div class="col-12 my-5 text-center">
+          <h2>Contact</h2>
+          <i class="mdi mdi-star-face fs-1"></i>
+        </div>
+        <div class="col-10 col-md-8 my-4">
+          <form>
+            <div class="form-floating mb-3">
+              <input type="email" required class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" required class="form-control" id="floatingName" placeholder="Name">
+              <label for="floatingName">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="floatingNumber" placeholder="Number">
+              <label for="floatingNumber">Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Comments</label>
+            </div>
+            <div class="text-end">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- !SECTION  -->
+
     </div>
   </main>
 
-  <footer></footer>
+  <footer>
+    <div class="container-fluid">
+      <section class="row bg-dark text-light">
+        <!-- NOTE can change order of flex items using breakpoints as well -->
+        <div class="col-12 col-md-4 order-3 order-md-1 p-5 ">
+          <h3 class="text-center">Location</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quae sint velit eius
+            voluptatem illum
+            dolorum possimus debitis nulla dolorem.</p>
+        </div>
+        <div class="col-12 col-md-4 order-1 order-md-2 p-5 text-center">
+          <h3>Around the Web</h3>
+          <nav class="fs-2">
+            <i class="mdi mdi-facebook"></i>
+            <i class="mdi mdi-twitter"></i>
+            <i class="mdi mdi-linkedin"></i>
+            <i class="mdi mdi-basketball"></i>
+          </nav>
+        </div>
+        <div class="col-12 col-md-4 order-2 order-md-3 p-5">
+          <h3 class="text-center">About Freelancer</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, blanditiis! Provident voluptates totam
+            repellat dolorum.</p>
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="col-12 text-center bg-secondary text-light py-3">
+          <small>Copyright <i class="mdi mdi-copyright"></i> Codeworks</small>
+        </div>
+      </section>
+    </div>
+  </footer>
 
 </body>
 
